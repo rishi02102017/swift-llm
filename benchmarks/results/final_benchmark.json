@@ -1,0 +1,269 @@
+{
+  "timestamp": "2025-12-12T10:44:30.465187",
+  "config": {
+    "samples_per_category": 5,
+    "cache_enabled": true
+  },
+  "latency_results": {
+    "simple": {
+      "category": "simple",
+      "total_queries": 5,
+      "latencies_ms": [
+        474.4575410000005,
+        654.1390000000007,
+        427.87049999999914,
+        308.01074999999935,
+        732.5148750000014
+      ],
+      "cache_hits": 0,
+      "cache_misses": 5,
+      "tier_distribution": {
+        "1": 4,
+        "3": 1
+      },
+      "total_cost": 4.550000000000001e-05,
+      "avg_latency_ms": 519.3985332000002,
+      "min_latency_ms": 308.01074999999935,
+      "max_latency_ms": 732.5148750000014,
+      "p50_latency_ms": 474.4575410000005,
+      "p95_latency_ms": 732.5148750000014,
+      "p99_latency_ms": 732.5148750000014,
+      "cache_hit_rate": 0.0
+    },
+    "moderate": {
+      "category": "moderate",
+      "total_queries": 5,
+      "latencies_ms": [
+        1788.3979170000011,
+        824.8124160000003,
+        894.9369580000006,
+        3475.5734999999995,
+        1441.687292000001
+      ],
+      "cache_hits": 0,
+      "cache_misses": 5,
+      "tier_distribution": {
+        "5": 1,
+        "1": 2,
+        "3": 1,
+        "4": 1
+      },
+      "total_cost": 0.00019640000000000003,
+      "avg_latency_ms": 1685.0816166000004,
+      "min_latency_ms": 824.8124160000003,
+      "max_latency_ms": 3475.5734999999995,
+      "p50_latency_ms": 1441.687292000001,
+      "p95_latency_ms": 3475.5734999999995,
+      "p99_latency_ms": 3475.5734999999995,
+      "cache_hit_rate": 0.0
+    },
+    "complex": {
+      "category": "complex",
+      "total_queries": 5,
+      "latencies_ms": [
+        2326.2677079999994,
+        2561.207792000001,
+        2044.108583,
+        4458.301791,
+        3904.482792000003
+      ],
+      "cache_hits": 0,
+      "cache_misses": 5,
+      "tier_distribution": {
+        "5": 2,
+        "4": 2,
+        "3": 1
+      },
+      "total_cost": 0.0002244,
+      "avg_latency_ms": 3058.8737332000005,
+      "min_latency_ms": 2044.108583,
+      "max_latency_ms": 4458.301791,
+      "p50_latency_ms": 2561.207792000001,
+      "p95_latency_ms": 4458.301791,
+      "p99_latency_ms": 4458.301791,
+      "cache_hit_rate": 0.0
+    },
+    "code": {
+      "category": "code",
+      "total_queries": 5,
+      "latencies_ms": [
+        1630.6156249999972,
+        1883.5873749999976,
+        2240.477666000004,
+        2675.2198750000034,
+        1247.9650829999969
+      ],
+      "cache_hits": 0,
+      "cache_misses": 5,
+      "tier_distribution": {
+        "4": 4,
+        "5": 1
+      },
+      "total_cost": 0.0002279,
+      "avg_latency_ms": 1935.5731248,
+      "min_latency_ms": 1247.9650829999969,
+      "max_latency_ms": 2675.2198750000034,
+      "p50_latency_ms": 1883.5873749999976,
+      "p95_latency_ms": 2675.2198750000034,
+      "p99_latency_ms": 2675.2198750000034,
+      "cache_hit_rate": 0.0
+    }
+  },
+  "cache_results": {
+    "original_queries": 10,
+    "similar_queries_per_original": 3,
+    "original_latencies": [
+      17.98279199999797,
+      10.583875000001797,
+      10.857292000004293,
+      2240.0533750000022,
+      12.01712499999985,
+      4408.041249999997,
+      3770.3619999999987,
+      1867.390958999998,
+      2941.267332999999,
+      5794.81458299999
+    ],
+    "similar_latencies": [
+      36.90237499999682,
+      8.533416999995325,
+      25.154249999999934,
+      7.964125000000877,
+      11.621749999996211,
+      12.61783300000019,
+      11.391666999998051,
+      10.931208000002357,
+      11.589667000002635,
+      11.101500000002318,
+      12.171416999997575,
+      12.069125000003567,
+      12.289958000003764,
+      12.034082999996087,
+      8.592833999998106,
+      4303.778041999997,
+      3871.0120830000037,
+      1696.5418750000013,
+      12.790791000000468,
+      11.519166999995889,
+      13.061874999998224,
+      11.980667000003109,
+      12.663875000001212,
+      11.343374999995604,
+      13.098999999996863,
+      11.227084000012155,
+      12.544999999988704,
+      5972.542750000002,
+      2620.1579999999894,
+      12.491959000001884
+    ],
+    "cache_hits_on_similar": 25,
+    "similar_cache_hit_rate": 0.8333333333333334,
+    "avg_original_latency": 2107.337058399999,
+    "avg_similar_latency": 626.3906917333328,
+    "speedup_factor": 3.3642534702561244
+  },
+  "routing_results": {
+    "total_tests": 7,
+    "correct_routing": 5,
+    "routing_details": [
+      {
+        "query": "Hi",
+        "description": "greeting",
+        "expected_tier": 1,
+        "actual_tier": 1,
+        "correct": true
+      },
+      {
+        "query": "What is 2+2?",
+        "description": "simple math",
+        "expected_tier": 1,
+        "actual_tier": 1,
+        "correct": true
+      },
+      {
+        "query": "What is Python?",
+        "description": "basic factual",
+        "expected_tier": 2,
+        "actual_tier": 5,
+        "correct": false
+      },
+      {
+        "query": "Explain machine learning",
+        "description": "explanation",
+        "expected_tier": 2,
+        "actual_tier": 3,
+        "correct": true
+      },
+      {
+        "query": "Compare Python and Java",
+        "description": "comparison",
+        "expected_tier": 3,
+        "actual_tier": 5,
+        "correct": false
+      },
+      {
+        "query": "Write a binary search in Pytho...",
+        "description": "code simple",
+        "expected_tier": 3,
+        "actual_tier": 4,
+        "correct": true
+      },
+      {
+        "query": "Implement a transformer attent...",
+        "description": "code complex",
+        "expected_tier": 4,
+        "actual_tier": 5,
+        "correct": true
+      }
+    ],
+    "accuracy": 0.7142857142857143
+  },
+  "swift_stats": {
+    "metrics": {
+      "total_queries": 67,
+      "cache_hits": 29,
+      "cache_hit_rate": 0.43283582089552236,
+      "avg_latency_ms": 1588.6742754776114,
+      "p50_latency_ms": 732.5148750000014,
+      "p95_latency_ms": 5794.81458299999,
+      "p99_latency_ms": 5972.542750000002,
+      "tier_distribution": {
+        "1": 40,
+        "3": 4,
+        "5": 9,
+        "4": 12,
+        "2": 2
+      },
+      "total_cost": 0.0014658000000000004,
+      "avg_cost_per_query": 2.1877611940298514e-05,
+      "avg_confidence": 0.838407214059988,
+      "escalation_rate": 0.3880597014925373
+    },
+    "router": {
+      "total_routes": 67,
+      "cache_routes": 29,
+      "tier_distribution": {
+        "1": 45,
+        "2": 6,
+        "3": 16,
+        "4": 0
+      },
+      "cache_route_rate": 0.43283582089552236,
+      "tier_1_pct": 0.6716417910447762,
+      "tier_2_pct": 0.08955223880597014,
+      "tier_3_pct": 0.23880597014925373,
+      "tier_4_pct": 0.0
+    },
+    "cache": {
+      "total_lookups": 60,
+      "cache_hits": 29,
+      "cache_misses": 31,
+      "total_stores": 22,
+      "evictions": 0,
+      "hit_rate": 0.48333333333333334,
+      "cache_size": 27,
+      "max_size": 10000,
+      "similarity_threshold": 0.85
+    }
+  }
+}

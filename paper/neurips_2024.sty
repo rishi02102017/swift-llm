@@ -1,0 +1,96 @@
+% NeurIPS 2024 Style File
+% Based on official NeurIPS template
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2024}[2024/01/01 NeurIPS 2024 Style]
+
+% Options
+\newif\if@final\@finalfalse
+\DeclareOption{final}{\@finaltrue}
+\DeclareOption{preprint}{\@finalfalse}
+\ProcessOptions\relax
+
+% Page layout
+\usepackage[
+    papersize={8.5in,11in},
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+]{geometry}
+
+% Fonts
+\usepackage{times}
+\usepackage{latexsym}
+
+% Spacing
+\usepackage{setspace}
+\linespread{1.0}
+
+% Sections
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}
+
+% Title and author
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}%
+    {\LARGE \@title \par}%
+    \vskip 1.5em%
+    {\large
+      \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+  \end{center}%
+  \par
+  \vskip 1.5em}
+
+% Abstract
+\renewenvironment{abstract}{%
+  \centerline{\large\bfseries Abstract}%
+  \vspace{0.5ex}%
+  \begin{quote}%
+}{%
+  \end{quote}%
+  \vskip 2ex%
+}
+
+% Footnotes
+\renewcommand{\footnoterule}{%
+  \kern -3pt
+  \hrule width 0.4\columnwidth
+  \kern 2.6pt
+}
+
+% Captions
+\usepackage{caption}
+\captionsetup{
+    font=small,
+    labelfont=bf,
+    textfont=it,
+    margin=1cm
+}
+
+% References
+\usepackage{natbib}
+\setcitestyle{numbers,square,comma}
+
+% Hyperref
+\usepackage[breaklinks=true,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% Line numbers for review (disabled in final)
+\if@final
+\else
+  \usepackage{lineno}
+  \linenumbers
+\fi
+
+\endinput
+
