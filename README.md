@@ -212,8 +212,8 @@ flowchart LR
     subgraph Dual Index System
         E --> F[Extract Key Terms]
         E --> G[Generate Embedding]
-        F --> H[(Lexical Index - O(1) Lookup)]
-        G --> I[(FAISS Index - O(log n) ANN)]
+        F --> H[Lexical Index]
+        G --> I[FAISS Index]
     end
 
     subgraph Storage Backend
