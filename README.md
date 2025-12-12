@@ -58,7 +58,7 @@ SWIFT-LLM addresses these through:
 ```mermaid
 graph LR
     A[User Query] --> B{Semantic Cache}
-    B -->|Hit| C[Instant Response<br/>< 1ms]
+    B -->|Hit| C[Instant Response - < 1ms]
     B -->|Miss| D{Complexity Router}
     D -->|Simple| E[Tier 2: Fast Model]
     D -->|Medium| F[Tier 3: Balanced]
@@ -103,9 +103,9 @@ flowchart TB
     end
 
     subgraph Caching Layer
-        E[(Lexical Index<br/>HashMap)]
-        F[(FAISS Index<br/>Vector Store)]
-        G[(SQLite<br/>Persistent Storage)]
+        E[(Lexical Index - HashMap)]
+        F[(FAISS Index - Vector Store)]
+        G[(SQLite - Persistent Storage)]
     end
 
     subgraph Routing Layer
@@ -116,10 +116,10 @@ flowchart TB
 
     subgraph Inference Layer
         K[Tier 1: Cache]
-        L[Tier 2: Llama 8B<br/>Groq API]
-        M[Tier 3: Llama 70B<br/>Groq API]
-        N[Tier 4: GPT-4o-mini<br/>OpenAI]
-        O[Tier 5: GPT-4o<br/>OpenAI]
+        L[Tier 2: Llama 8B - Groq API]
+        M[Tier 3: Llama 70B - Groq API]
+        N[Tier 4: GPT-4o-mini - OpenAI]
+        O[Tier 5: GPT-4o - OpenAI]
     end
 
     subgraph Validation Layer
@@ -212,8 +212,8 @@ flowchart LR
     subgraph Dual Index System
         E --> F[Extract Key Terms]
         E --> G[Generate Embedding]
-        F --> H[(Lexical Index<br/>O(1) Lookup)]
-        G --> I[(FAISS Index<br/>O(log n) ANN)]
+        F --> H[(Lexical Index - O(1) Lookup)]
+        G --> I[(FAISS Index - O(log n) ANN)]
     end
 
     subgraph Storage Backend
@@ -300,18 +300,18 @@ pie title Query Tier Distribution
 ```mermaid
 graph TB
     subgraph Embedding Models
-        A[all-MiniLM-L6-v2<br/>384-dim embeddings<br/>22M params]
+        A[all-MiniLM-L6-v2 - 384-dim embeddings - 22M params]
     end
 
     subgraph Inference Models
-        B[Llama 3.1 8B<br/>Groq API<br/>~300ms latency]
-        C[Llama 3.1 70B<br/>Groq API<br/>~800ms latency]
-        D[GPT-4o-mini<br/>OpenAI API<br/>~1.2s latency]
-        E[GPT-4o<br/>OpenAI API<br/>~2s latency]
+        B[Llama 3.1 8B - Groq API - ~300ms latency]
+        C[Llama 3.1 70B - Groq API - ~800ms latency]
+        D[GPT-4o-mini - OpenAI API - ~1.2s latency]
+        E[GPT-4o - OpenAI API - ~2s latency]
     end
 
     subgraph Vector Index
-        F[FAISS IndexFlatIP<br/>Inner Product Search<br/>Normalized Cosine Similarity]
+        F[FAISS IndexFlatIP - Inner Product Search - Normalized Cosine Similarity]
     end
 
     A --> F
@@ -490,7 +490,7 @@ flowchart LR
     --> C["capital france"]
     --> D[Hash: 0x7a3f...]
     
-    A --> E[Embedding<br/>384-dim]
+    A --> E[Embedding - 384-dim]
     
     style D fill:#22c55e
     style E fill:#3b82f6
