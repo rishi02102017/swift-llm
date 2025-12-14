@@ -1,6 +1,6 @@
 # SWIFT-LLM Performance Report
 
-**Date:** December 12, 2024  
+**Date:** December 12, 2025
 **Project:** SWIFT-LLM - Semantic-Aware Intelligent Fast Inference with Tiered Routing
 
 ---
